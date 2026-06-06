@@ -1,0 +1,44 @@
+.customers h1 {
+  color: #2c5282;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: #2c5282;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.table tbody tr:hover {
+  background-color: #edf2f7;
+}
