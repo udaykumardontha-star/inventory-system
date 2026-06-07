@@ -76,8 +76,8 @@ function Dashboard() {
           </div>
           <div className="stat-card-info">
             <p className="stat-card-label">Inventory Value</p>
-            <h2 className="stat-card-value" style={{ color: 'var(--accent-600)' }}>
-              ₹{inventoryValue.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
+            <h2 className="stat-card-value" style={{ color: 'var(--accent-600)', fontSize: '1.5rem', whiteSpace: 'nowrap' }}>
+              {Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', notation: 'compact', maximumFractionDigits: 1 }).format(inventoryValue)}
             </h2>
             <p className="stat-card-desc">Total asset value</p>
           </div>
