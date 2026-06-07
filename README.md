@@ -121,6 +121,6 @@ assignment/
 - **Frontend:** Deployed on Vercel
 
 ### Live URLs
-- Frontend: [Add your URL]
-- Backend API: [Add your URL]
-- Docker Hub: [Add your URL]
+- Frontend: https://inventory-system-sigma-six.vercel.app
+- Backend API: https://inventory-system-ck85.onrender.com
+- Docker Hub: https://hub.docker.com/r/udaykumardonths/inventory-backend
