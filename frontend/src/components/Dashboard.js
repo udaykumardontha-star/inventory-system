@@ -70,6 +70,17 @@ function Dashboard() {
           </div>
         </div>
 
+        <div className="stat-card stat-card-customers" onClick={() => navigate('/customers')} style={{ cursor: 'pointer' }}>
+          <div className="stat-card-icon">
+            <UsersIcon size={28} />
+          </div>
+          <div className="stat-card-info">
+            <p className="stat-card-label">Total Customers</p>
+            <h2 className="stat-card-value">{data.total_customers || 0}</h2>
+            <p className="stat-card-desc">Registered clients</p>
+          </div>
+        </div>
+
         <div className="stat-card stat-card-customers">
           <div className="stat-card-icon">
             <BagIcon size={28} />
