@@ -21,6 +21,12 @@ with app.app_context():
         except Exception as e:
             print(f"DB not ready, retrying in 3s... ({e})")
             time.sleep(3)
+@app.route('/')
+def home():
+    return jsonify({
+        "status": "online",
+        "message": "Inventory System API is running. Access endpoints via /api"
+    })
 
 
 # ---- PRODUCT ROUTES ----
