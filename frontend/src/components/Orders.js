@@ -90,7 +90,7 @@ function Orders() {
                 >
                   <td>#{order.id}</td>
                   <td>{order.customer_name || 'N/A'}</td>
-                  <td>${parseFloat(order.total || 0).toFixed(2)}</td>
+                  <td>₹{parseFloat(order.total || 0).toFixed(2)}</td>
                   <td>{new Date(order.created_at).toLocaleDateString()}</td>
                   <td>
                     <button

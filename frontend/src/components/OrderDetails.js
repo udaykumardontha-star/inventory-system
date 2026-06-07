@@ -38,7 +38,7 @@ function OrderDetails() {
           <p><strong>Order ID:</strong> #{order.id}</p>
           <p><strong>Customer:</strong> {order.customer_name || 'N/A'}</p>
           <p><strong>Date:</strong> {new Date(order.created_at).toLocaleDateString()}</p>
-          <p><strong>Total:</strong> ${parseFloat(order.total || 0).toFixed(2)}</p>
+          <p><strong>Total:</strong> ₹{parseFloat(order.total || 0).toFixed(2)}</p>
         </div>
       </div>
 
@@ -59,9 +59,9 @@ function OrderDetails() {
                 <tr key={index}>
                   <td>{item.product_name || 'Unknown'}</td>
                   <td>{item.quantity}</td>
-                  <td>${parseFloat(item.price || 0).toFixed(2)}</td>
+                  <td>₹{parseFloat(item.price || 0).toFixed(2)}</td>
                   <td>
-                    ${(item.price * item.quantity).toFixed(2)}
+                    ₹{(item.price * item.quantity).toFixed(2)}
                   </td>
                 </tr>
               ))

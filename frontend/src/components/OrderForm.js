@@ -110,7 +110,7 @@ function OrderForm({ onSave, onClose }) {
                   <option value="">-- Select Product --</option>
                   {products.map((p) => (
                     <option key={p.id} value={p.id}>
-                      {p.name} - ${parseFloat(p.price).toFixed(2)} (Stock: {p.quantity})
+                      {p.name} - ₹{parseFloat(p.price).toFixed(2)} (Stock: {p.quantity})
                     </option>
                   ))}
                 </select>
@@ -144,7 +144,7 @@ function OrderForm({ onSave, onClose }) {
           </div>
 
           <div className="order-total">
-            <strong>Total: ${getTotal().toFixed(2)}</strong>
+            <strong>Total: ₹{getTotal().toFixed(2)}</strong>
           </div>
 
           {errors.submit && <div className="field-error">{errors.submit}</div>}

@@ -96,7 +96,7 @@ function Products() {
                 <tr key={product.id}>
                   <td>{product.name}</td>
                   <td>{product.sku}</td>
-                  <td>${parseFloat(product.price).toFixed(2)}</td>
+                  <td>₹{parseFloat(product.price).toFixed(2)}</td>
                   <td>{product.quantity}</td>
                   <td>
                     <button
