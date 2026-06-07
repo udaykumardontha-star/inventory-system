@@ -65,7 +65,7 @@ function Dashboard() {
 
       {/* Stat Cards */}
       <div className="stat-cards">
-        <div className="stat-card stat-card-products">
+        <div className="stat-card stat-card-products" onClick={() => navigate('/products')} style={{ cursor: 'pointer' }}>
           <div className="stat-card-icon">
             <BoxIcon size={28} />
           </div>
@@ -76,7 +76,7 @@ function Dashboard() {
           </div>
         </div>
 
-        <div className="stat-card stat-card-customers">
+        <div className="stat-card stat-card-customers" onClick={() => navigate('/customers')} style={{ cursor: 'pointer' }}>
           <div className="stat-card-icon">
             <UsersIcon size={28} />
           </div>
@@ -87,7 +87,7 @@ function Dashboard() {
           </div>
         </div>
 
-        <div className="stat-card stat-card-orders">
+        <div className="stat-card stat-card-orders" onClick={() => navigate('/orders')} style={{ cursor: 'pointer' }}>
           <div className="stat-card-icon">
             <CartIcon size={28} />
           </div>
