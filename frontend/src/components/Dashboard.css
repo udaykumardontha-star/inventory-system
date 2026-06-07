@@ -2,83 +2,16 @@
    PREMIUM DASHBOARD STYLES
    ======================================== */
 
-/* Hero Banner */
-.hero-banner {
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4338ca 70%, #6366f1 100%);
-  border-radius: var(--radius-xl);
-  padding: 40px 36px;
-  margin-bottom: 28px;
-  position: relative;
-  overflow: hidden;
-  animation: fadeInUp 0.5s ease-out;
-  box-shadow: 0 8px 32px rgba(49, 46, 129, 0.3);
+/* Page Header */
+.page-header {
+  margin-bottom: 24px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-title {
-  color: white;
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
-}
-
-.hero-subtitle {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
-  font-weight: 400;
-  max-width: 500px;
-  line-height: 1.6;
-}
-
-.hero-decoration {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 50%;
-  pointer-events: none;
-}
-
-.hero-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.hero-circle-1 {
-  width: 200px;
-  height: 200px;
-  top: -40px;
-  right: -20px;
-  animation: float 6s ease-in-out infinite;
-}
-
-.hero-circle-2 {
-  width: 120px;
-  height: 120px;
-  bottom: -30px;
-  right: 100px;
-  background: rgba(255, 255, 255, 0.04);
-  animation: float 8s ease-in-out infinite reverse;
-}
-
-.hero-circle-3 {
-  width: 80px;
-  height: 80px;
-  top: 20px;
-  right: 200px;
-  background: rgba(99, 102, 241, 0.2);
-  animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
+.page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
 }
 
 /* Stat Cards */

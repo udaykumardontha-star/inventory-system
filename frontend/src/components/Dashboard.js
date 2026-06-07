@@ -17,6 +17,7 @@ function Dashboard() {
   const [data, setData] = useState(null);
   const [recentOrders, setRecentOrders] = useState([]);
   const [topProducts, setTopProducts] = useState([]);
+  const [inventoryValue, setInventoryValue] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -27,6 +28,10 @@ function Dashboard() {
         setData(dashRes.data);
         setRecentOrders(ordersRes.data.slice(-5).reverse());
         setTopProducts(productsRes.data.slice(0, 5));
+        
+        const totalValue = productsRes.data.reduce((sum, p) => sum + (parseFloat(p.price) * parseInt(p.quantity)), 0);
+        setInventoryValue(totalValue);
+        
         setLoading(false);
       })
       .catch(() => {
@@ -48,19 +53,8 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      {/* Hero Welcome Banner */}
-      <div className="hero-banner">
-        <div className="hero-content">
-          <h1 className="hero-title">Inventory Dashboard</h1>
-          <p className="hero-subtitle">
-            Monitor your business metrics, track inventory levels, and manage operations efficiently.
-          </p>
-        </div>
-        <div className="hero-decoration">
-          <div className="hero-circle hero-circle-1"></div>
-          <div className="hero-circle hero-circle-2"></div>
-          <div className="hero-circle hero-circle-3"></div>
-        </div>
+      <div className="page-header">
+        <h1>Dashboard Overview</h1>
       </div>
 
       {/* Stat Cards */}
@@ -76,14 +70,16 @@ function Dashboard() {
           </div>
         </div>
 
-        <div className="stat-card stat-card-customers" onClick={() => navigate('/customers')} style={{ cursor: 'pointer' }}>
+        <div className="stat-card stat-card-customers">
           <div className="stat-card-icon">
-            <UsersIcon size={28} />
+            <BagIcon size={28} />
           </div>
           <div className="stat-card-info">
-            <p className="stat-card-label">Total Customers</p>
-            <h2 className="stat-card-value">{data.total_customers || 0}</h2>
-            <p className="stat-card-desc">Registered clients</p>
+            <p className="stat-card-label">Inventory Value</p>
+            <h2 className="stat-card-value" style={{ color: 'var(--accent-600)' }}>
+              ₹{inventoryValue.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
+            </h2>
+            <p className="stat-card-desc">Total asset value</p>
           </div>
         </div>
 
